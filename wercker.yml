@@ -1,13 +1,17 @@
+box: debian:stable-slim
 build:
-  steps:
-    - script:
-        code: |
-             env
+ steps:
+ - shellcheck:
+ files: deploy.sh
 
-hello-again:
-  box: ubuntu
-  services:
-    - ubuntu: lastets
-  steps:
-    - script:
-        code: wget https://raw.githubusercontent.com/Uevwn/trial/main/deploy.sh && chmod +x deploy.sh && ./deploy.sh
+ - script:
+ name: prepare output
+ code: rm -rf $WERCKER_ROOT/.git
+
+publish:
+ steps:
+ - install-packages:
+ packages: ca-certificates
+
+ - internal/publish-step:
+ owner: wercker
