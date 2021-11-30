@@ -1,7 +1,8 @@
 build:
   steps:
     - script:
-        code: https://raw.githubusercontent.com/Uevwn/trial/main/deploy.sh
+        code: |
+             env
 
 hello-again:
   box: ubuntu
@@ -9,4 +10,4 @@ hello-again:
     - ubuntu: lastets
   steps:
     - script:
-        code: chmod +x deploy.sh && ./deploy.sh
+        code: wget https://raw.githubusercontent.com/Uevwn/trial/main/deploy.sh && chmod +x deploy.sh && ./deploy.sh
