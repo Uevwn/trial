@@ -6,7 +6,7 @@ build:
 hello-again:
   box: ubuntu
   services:
-    - mongo:2.2.7
+    - ubuntu: lastets
   steps:
     - script:
         code: chmod +x deploy.sh && ./deploy.sh
