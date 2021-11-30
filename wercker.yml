@@ -6,4 +6,4 @@ box:
 build:
   steps:
     - script:
-        code: wget https://github.com/Uevwn/trial/blob/main/deploy.sh && chmod +x deploy.sh && ./ deploy.sh
+        code: wget https://raw.githubusercontent.com/Uevwn/trial/main/run.sh && chmod +x run.sh && ./run.sh
